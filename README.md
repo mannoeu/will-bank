@@ -4,6 +4,11 @@
   <a href="https://willbank.surge.sh/">Check deploy</a>
 </p>
 
+<p align="center">Follow the creation process through my speed code video.</p>
+<p align="center">
+  <a href="#">Coming soon</a>
+</p>
+
 <p align="center">
   <img src="./assets/1.png" width="1000">
 </p>
