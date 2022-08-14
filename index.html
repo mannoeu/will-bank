@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will Bank</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="menu">
+      <nav>
+        <img src="./assets/logo.png" alt="Will Bank" />
+        <div class="mobile-menu">
+          <i data-feather="menu"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="#">Produtos</a>
+          </li>
+          <li>
+            <a href="#">Sobre</a>
+          </li>
+          <li>
+            <a href="#">Carreiras</a>
+          </li>
+          <li>
+            <a href="#">Loja Will</a>
+          </li>
+        </ul>
+        <button class="btn-black hover-primary">Peça seu Cartão</button>
+      </nav>
+    </header>
+    <section class="hero">
+      <article
+        class="card"
+        id="card"
+        data-tilt
+        data-tilt-glare
+        data-tilt-max-glare="0.8"
+        data-tilt-full-page-listening
+      >
+        <div class="chip">
+          <img src="./assets/chip.png" alt="Chip" />
+          <i data-feather="wifi"></i>
+        </div>
+
+        <div class="logo">
+          <img src="./assets/logo-white.png" alt="Logo white - Will Bank" />
+        </div>
+
+        <div class="flag">
+          <img src="./assets/master-card.png" alt="Master Card Flag" />
+          <span>Internacional</span>
+        </div>
+      </article>
+
+      <article class="description">
+        <h4>Olá, eu sou um banco digital,</h4>
+        <h2>mas pode me chamar de will_</h2>
+      </article>
+    </section>
+
+    <section class="content">
+      <img src="./assets/phone-and-card.png" alt="Will Bank App" />
+      <article>
+        <h4>Com o will na mão, a vida de muita gente evoluiu.</h4>
+        <h2>E eu escolhi um time incrível para te contar essa história.</h2>
+        <button class="btn-black hover-light">Vem ver</button>
+      </article>
+    </section>
+
+    <section class="call-to-action">
+      <h2>
+        <b>comigo, coisa boa nunca vem sozinha.</b> é por isso que eu tenho um
+        monte de vantagens pra você aproveitar.
+      </h2>
+    </section>
+
+    <footer>
+      <img src="./assets/logo.png" alt="Logo - Will Bank" />
+    </footer>
+
+    <div class="reveal"></div>
+
+    <script src="./scripts/vanillatilt.js"></script>
+    <script type="text/javascript">
+      feather.replace();
+
+      VanillaTilt.init(document.querySelector("#card"), {
+        max: 25,
+        speed: 400,
+      });
+
+      gsap.from(
+        "header.menu > nav, section.hero .card, section.hero .description",
+        2,
+        {
+          y: "200",
+          opacity: 0,
+          ease: Expo.easeInOut,
+          delay: 1.5,
+          stagger: 0.08,
+        }
+      );
+
+      gsap.from("section.content img, section.content article", 1, {
+        scale: 0,
+        ease: Elastic.easeOut,
+        delay: 2,
+      });
+
+      gsap.to("div.reveal", 0.6, {
+        width: "0%",
+        ease: Power1.easeIn,
+        delay: 1,
+      });
+    </script>
+  </body>
+</html>
