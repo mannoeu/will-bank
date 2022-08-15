@@ -6,7 +6,7 @@
 
 <p align="center">Follow the creation process through my speed code video.</p>
 <p align="center">
-  <a href="#">Coming soon</a>
+  <a href="https://www.youtube.com/watch?v=MrSX0RTaRlY&ab_channel=MDEV">YouTube</a>
 </p>
 
 <p align="center">
